@@ -26,6 +26,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $_SESSION['telephone'] = $_POST['telephone'];
         header('Location: register.php');
     } else {
+        $_SESSION['authenticated'] = true;
         header('Location: restricted.php');
     }
     exit;

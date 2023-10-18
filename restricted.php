@@ -2,12 +2,12 @@
 session_start();
 
 // Check if the user is authenticated
-// if (!isset($_SESSION['authenticated']) || $_SESSION['authenticated'] == false) {
-//     // Redirect guest users to the login page
-//     $_SESSION['error'] = 'Access to this page is restricted to authenticated users. Please log in.';
-//     header('Location: login.php');
-//     exit;
-// }
+if (!isset($_SESSION['authenticated']) || $_SESSION['authenticated'] == false) {
+    // Redirect guest users to the login page
+    $_SESSION['error'] = 'Access to this page is restricted to authenticated users. Please log in.';
+    header('Location: login.php');
+    exit;
+}
 ?>
 
 <!doctype html>
